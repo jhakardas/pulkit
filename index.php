@@ -84,7 +84,7 @@
 
     function getCurrentURL(){
         $pageURL = (isset( $_SERVER["HTTPS"] ) && $_SERVER["HTTPS"] == "on") ? "https://" : "http://";
-        if($SERVER["SERVER_NAME"]!="" && $_SERVER["SERVER_NAME"]!=""){
+        if($_SERVER["SERVER_NAME"]!="" && $_SERVER["SERVER_NAME"]!="_"){
           $pageURL .= $_SERVER["SERVER_NAME"] . $_SERVER["REQUEST_URI"];
         }else{
           $pageURL .= $_SERVER["HTTP_HOST"] . $_SERVER["REQUEST_URI"];
@@ -151,7 +151,7 @@ return trim($ipaddress_pool[0]);
   function PreventLoad(){
       $check = new CloakerlyChecker();
       $check->SetKey("UWP6OblnFYzZw1QymqdtJhfxcx8mCRgGe4Pw8B95AvMKhMd1FnvXNsokjjrlz3LY");
-      $check->SetCampaign("19903");
+      $check->SetCampaign("20028");
       $check->SetStrictness("0");
       $check->SetReferrer(isset($_SERVER["HTTP_REFERER"]) ? $_SERVER["HTTP_REFERER"] : "Direct");
       $check->PassUserAgent(true);
